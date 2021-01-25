@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="150dp"
+        android:id="@+id/cardview_img"
+        app:cardBackgroundColor="@color/black"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            android:id="@+id/image_view_book"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardCornerRadius="20dp"
+        android:layout_toRightOf="@id/cardview_img"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginTop="28dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="name of book"
+                android:textStyle="bold"
+                android:id="@+id/output_namebook"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="name of author"
+                android:id="@+id/output_name_author"
+                android:layout_below="@+id/output_namebook"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="12dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="38dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/output_name_author">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:background="@drawable/ic_cash"
+                    android:layout_height="18dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_gravity="bottom"/>
+            <TextView
+                android:id="@+id/output_price"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="3dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                tools:text="price" />
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
